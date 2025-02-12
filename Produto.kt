@@ -30,7 +30,7 @@ fun main(){
                 println(produtos)
             }
             "2" -> {
-                println("\n--- Atualizar Preço ---")
+                println("\n--- Adicionar novo produto ---")
                 println("Digite o nome do produto, seu preço e a nova quantidade em estoque respectivamente: ")
                 produtos.add(Produto(readln(), readln(), readln()))
             }
