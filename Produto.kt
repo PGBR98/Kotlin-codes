@@ -30,9 +30,28 @@ fun main(){
                 println(produtos)
             }
             "2" -> {
-                println("\n--- Adicionar novo produto ---")
-                println("Digite o nome do produto, seu preço e a nova quantidade em estoque respectivamente: ")
-                produtos.add(Produto(readln(), readln(), readln()))
+                println("\n--- Atualizar um produto ---")
+                println("Digite 1 para atualizar o primeiro produto da lista, 2 para o segundo e 3 para o terceiro: ")
+                when (readln()) {
+                    "1" -> {
+                        println("\n--- Atualizar o produto 1 ---")
+                        println("Digite o nome do produto, seu preço e a nova quantidade em estoque respectivamente: ")
+                        produtos.set(0, (Produto(readln(), readln(), readln())))
+                    }
+                    "2" -> {
+                        println("\n--- Atualizar o produto 2 ---")
+                        println("Digite o nome do produto, seu preço e a nova quantidade em estoque respectivamente: ")
+                        produtos.set(1, (Produto(readln(), readln(), readln())))
+                    }
+                    "3" -> {
+                        println("\n--- Atualizar o produto 3 ---")
+                        println("Digite o nome do produto, seu preço e a nova quantidade em estoque respectivamente: ")
+                        produtos.set(2, (Produto(readln(), readln(), readln())))
+                    }
+                    else -> {
+                        println("Opção inválida. Tente novamente.")
+                    }
+                }
             }
             "3" -> {
                 println("Programa encerrado")
